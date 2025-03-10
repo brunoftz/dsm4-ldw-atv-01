@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Vamos jogar um jogo?</h1>
+    <hr />
+    <h4>Você consegue lembrar o nome de quantos personagens?</h2>
+
+    <ol>
+        {%for personagem in personagens: %}
+        <li>{{personagem}}</li>
+        {% endfor %}
+    </ol>
+    <hr>
+    <h4>Digite o nome de um personagem por vez e veja de quais se lembra:</h4>
+    <form action="{{url_for('jogo')}}" method="POST">
+        <label>Personagem:</label>
+        <input type="text" name="personagem">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+
+{% endblock content %}

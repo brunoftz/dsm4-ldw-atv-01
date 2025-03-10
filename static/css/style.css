@@ -1,0 +1,47 @@
+h1 {
+    color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #ffee00;
+}
+
+/* Media query for large screens */
+@media only screen and (min-width: 992px) {
+  .navbar {
+    display: flex;
+    flex-direction: column; /* Stack logo on top and navbar items below */
+    align-items: center; /* Center the navbar contents */
+    justify-content: center; /* Center vertically if needed */
+  }
+  
+  .navbar .navbar-nav {
+    text-align: center; /* Center navigation items */
+    margin-top: 1em; /* Add spacing between logo and nav items */
+    border-top: none; /* Remove border-top for large screens */
+  }
+
+  .navbar .navbar-toggler {
+    display: none; /* Hide hamburger menu on large screens */
+  }
+}
+
+/* Small screen default navbar behavior */
+.navbar .navbar-nav {
+  margin-top: 0.5em;
+  border-top: 2px solid #000;
+  text-align: center; /* Center the nav items on small screens */
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
