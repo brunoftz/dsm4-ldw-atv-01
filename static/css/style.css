@@ -45,3 +45,16 @@ h1 {
   align-items: center;
   width: 100%;
 }
+
+.text-dragon {
+  color: #580000 !important;
+}
+
+
+.character-image {
+  object-fit: contain;
+  max-height: 300px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}

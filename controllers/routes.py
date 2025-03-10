@@ -2,7 +2,6 @@ import urllib.request
 import json
 from flask import render_template, request, redirect, url_for
 
-# Store your characters (assuming you want to keep track of added ones)
 personagens = []
 plist = []
 
@@ -37,7 +36,6 @@ def init_app(app):
         dbzjson = json.loads(data)
 
         if id:
-            # Find character by ID from the 'items' list
             p_info = next((persona for persona in dbzjson['items'] if persona['id'] == id), None)
 
             if p_info:

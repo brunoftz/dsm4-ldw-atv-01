@@ -1,23 +1,47 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 
-<div class="container" style="background-color: #f0f0f0; border-radius: 8px">
-  <div class="row">
-    <div class="col-md-6 m-auto">
-      <a href="{{url_for('apidbz')}}" class="btn btn-dark">
-        << Todos os jogos</a
-      ><br /><br />
-      <div class="card">
-        <img src="{{p_info.image}}" alt="{{p_info.name}}" />
-        <div class="card-body m-auto">
-          <h3>{{p_info.name}}</h3>
-          <p>Raça: {{p_info.name}}</p>
-          <p>Ki: {{p_info.ki}}</p>
-          <p>Gênero: {{p_info.gender}}</p>
-          <p>Afiliação: {{p_info.affiliation}}</p>
-          <p>Descrição: {{p_info.description}}</p>
+{% block content %}
+
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <a href="{{url_for('apidbz')}}" class="btn mb-4" style="background-color: #580000; color: white;">
+                <i class="fas fa-arrow-left"></i> Todos os personagens
+            </a>
+
+            <div class="card shadow-sm">
+                <img src="{{p_info.image}}" class="card-img-top character-image" alt="{{p_info.name}}">
+                <div class="card-body">
+                    <h2 class="text-dragon text-center mb-4">{{p_info.name}}</h2>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Informações Básicas</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><strong>Raça:</strong> {{p_info.name}}</li>
+                                        <li class="list-group-item"><strong>Ki:</strong> {{p_info.ki}}</li>
+                                        <li class="list-group-item"><strong>Gênero:</strong> {{p_info.gender}}</li>
+                                        <li class="list-group-item"><strong>Afiliação:</strong> {{p_info.affiliation}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Descrição</h5>
+                                    <p class="card-text">{{p_info.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
+
 {% endblock content %}
